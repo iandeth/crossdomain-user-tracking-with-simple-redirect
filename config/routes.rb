@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'a' => 'site_a#index'
   get 'b' => 'site_b#index'
-  get 'bridge' => 'bridge#index'
+  get 'b/cookie-write' => 'site_b#cookie_write'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

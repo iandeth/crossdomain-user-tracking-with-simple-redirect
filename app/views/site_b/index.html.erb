@@ -3,9 +3,16 @@
 <% end %>
 
 <h1>B: lp</h1>
-<div id="uuid"></div>
+<div id="logged_in"></div>
+<br/>
+<input type="button" value="write cookie" id="wc"/>
 
-<script src="http://kzp.www.domain-a.dev:3000/bridge"></script>
 <script type="text/javascript">
-$('#uuid').text(kz.logged_in);
+  var lg = $.cookie('logged_in')
+  if (lg)
+    $('#logged_in').text(lg);
+
+  $('#wc').click(function(){
+    $.cookie('foo', Math.floor(Math.random() * 1000000).toString(), { path: '/' });
+  });
 </script>
