@@ -1,0 +1,12 @@
+<% content_for :head do %>
+  <title>A: login complete</title>
+<% end %>
+
+<h1>A: login complete</h1>
+<div id="logged_in"></div>
+<script type="text/javascript">
+if (!$.cookie('logged_in')) {
+  $.cookie('logged_in', Math.floor(Math.random() * 1000000).toString(), { domain: 'www.domain-a.dev', path: '/' });
+}
+$('#logged_in').text($.cookie('logged_in'));
+</script>
