@@ -16,9 +16,9 @@ class SiteAController < ApplicationController
   private
   def resolve_host
    if request.headers['SERVER_NAME'].match(/heroku/)
-     "http://kzp.bashi-heroku.pbcd.net"
+     "http://bashi-etag.herokuapp.com"
    elsif request.headers['SERVER_NAME'].match(/ngrok/)
-     "http://c21c5230.ngrok.io"
+     "http://9917b250.ngrok.io"
    else
      "http://www.domain-b.dev:3000"
    end
